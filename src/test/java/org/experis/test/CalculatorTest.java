@@ -17,7 +17,7 @@ public class CalculatorTest {
     @Test
     // Questo test ha un nome descrittivo che verrà visualizzato nell'output dei test
     @DisplayName("Test Addizione")
-    public void testAdd(){
+    public void getAdd(){
         // eseguo l'operazione di addizione
         float result = calculator.add(3.3f, 2.3f);
         float result2 = calculator.add(2.8f, 3.4f);
@@ -28,7 +28,7 @@ public class CalculatorTest {
 
     @Test
     @DisplayName("Test Sottrazione")
-    public void testSubtract(){
+    public void getSubtract(){
         float result = calculator.subtract(3.0f, 2.0f);
         float result2 = calculator.subtract(7.5f, 3.4f);
         assertEquals(1.0f, result);
@@ -37,7 +37,7 @@ public class CalculatorTest {
 
     @Test
     @DisplayName("Test Moltiplicazione")
-    public void testMultiply(){
+    public void getMultiply(){
         float result = calculator.multiply(3.0f, 3.0f);
         float result2 = calculator.multiply(8.0f, 4.0f);
         assertEquals(9.0f, result);
@@ -46,7 +46,7 @@ public class CalculatorTest {
 
     @Test
     @DisplayName("Test Divisione")
-    public void testDivide(){
+    public void getDivide(){
         float result = calculator.divide(6.0f, 3.0f);
         float result2 = calculator.divide(10.0f, 2.0f);
         assertEquals(2.0f, result);
@@ -55,7 +55,7 @@ public class CalculatorTest {
 
     @Test
     @DisplayName("Test Divisione Per Zero")
-    public void testDivideByZero(){
+    public void getDivideByZero(){
         // verifico se viene sollevata un'eccezione quando si cerca di dividere per zero
         assertThrows(IllegalArgumentException.class, () -> calculator.divide(5.0f, 0.0f));
         assertThrows(IllegalArgumentException.class, () -> calculator.divide(7.0f, 0.0f));
